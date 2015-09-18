@@ -10,8 +10,6 @@ With this project you can create your messaging app without use a database (It u
  * States for share your moments
  * Share links, youtube and vimeo videos, images png and jpg and stickers
 
-## Screenshost
-![alt tag](http://a.fsdn.com/con/app/proj/m2s-free-sms/screenshots/capturada.jpg)
 ![alt tag](http://a.fsdn.com/con/app/proj/m2s-free-sms/screenshots/capturada2.jpg)
 
 ## Build app
