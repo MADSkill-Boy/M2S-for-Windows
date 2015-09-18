@@ -9,5 +9,6 @@ With this project you can create your messaging app without use a database (It u
  * Public groups for meet people (also privates)
  * States for share your moments
  * Share links, youtube and vimeo videos, images png and jpg and stickers
- 
- This app works fine on Windows with [nw.js](https://github.com/nwjs/nw.js) with 0.8.6 version.
+
+--
+This app works fine on Windows with [nw.js](https://github.com/nwjs/nw.js) with 0.8.6 version.
