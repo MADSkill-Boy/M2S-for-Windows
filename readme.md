@@ -1,5 +1,5 @@
 # M2S for Windows
-----
+
 With this project you can create your messaging app without use a database (It use M2S database with more 10.000 users), you can modify all the code for build your custom app to your needs.
 
 ## Features of M2S:
