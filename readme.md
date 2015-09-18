@@ -11,8 +11,8 @@ With this project you can create your messaging app without use a database (It u
  * Share links, youtube and vimeo videos, images png and jpg and stickers
 
 ## Screenshost
-![alt tag](http://a.fsdn.com/con/app/proj/m2s-free-sms/screenshots/capturada.jpg/182/137)
-![alt tag](http://a.fsdn.com/con/app/proj/m2s-free-sms/screenshots/capturada2.jpg/182/137)
+![alt tag](http://a.fsdn.com/con/app/proj/m2s-free-sms/screenshots/capturada.jpg)
+![alt tag](http://a.fsdn.com/con/app/proj/m2s-free-sms/screenshots/capturada2.jpg)
 
 ## Build app
 This app works fine on Windows with [nw.js](https://github.com/nwjs/nw.js) with 0.8.6 version but you can also try with other version.
