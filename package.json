@@ -1,0 +1,26 @@
+{
+  "name": "M2S",
+  "main": "app://host/index.html",
+  "version": "1.0",
+  "window": {
+    "title": "M2S",
+    "icon": "images/icon.png",
+    "toolbar": false,
+    "frame": false,
+    "width": 380,
+    "height": 600,
+    "min_width": 380,
+    "min_height": 600,
+    "resizable": true
+  },
+  "webkit": {
+    "plugin": true
+  },
+  "dependencies": {
+    "node-uuid": "1.4.1",
+    "request": "2.34.0",
+    "adm-zip": "0.4.4",
+    "wget": "0.0.1",
+    "tunnel": "0.0.2"
+  }
+}

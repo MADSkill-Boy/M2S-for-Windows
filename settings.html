@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/exs.css">
+		<script src="js/jquery-2.1.0.min.js"></script>
+        <script src="js/md5.js"></script>
+        <script src="js/asterisc.js"></script>
+        <script src="js/vex.combined.min.js"></script>
+        <script>vex.defaultOptions.className = 'vex-theme-top';</script>
+        <link rel="stylesheet" href="css/vex.css" />
+        <link rel="stylesheet" href="css/vex-theme-top.css" />
+        <script src="js/nw-desktop-notifications.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+        <script type="text/javascript" src="js/modals.js"></script>
+		<link href="css/window.css" rel="stylesheet" media="screen">	
+        <link href="css/lungo.icon.css" rel="stylesheet" media="screen">
+        <link href="css/stickers.css" rel="stylesheet" media="screen">	
+	</head>
+	<body class="macosx lion">
+<div class="app statebody settingbody">
+    <div class="title-bar">
+        
+        <div class="title-drag"></div>
+        <div class="app-title">
+            <span class="text" data-translate="settings"></span>
+        </div>
+        <span class="button-container window-controls">
+            <ul class="inline">
+                <li><a class="button minimize-button" href="#min" id="min">Minimize</a></li>
+                <li><a class="button maximize-button" href="#max" id="max">Maximize</a></li>
+                <li><a class="button close-button" href="#close" id="closehide">Close</a></li>
+            </ul>
+        </span>
+    </div>
+    <div class="app-bar">
+      <div class="background-blur" style="background-position-x: -640px;"></div>
+      <ul class="menu-bar">
+        <img src=""/>
+        <a href="myfriends.html"><li class="icon user"></li></a>
+        <a href="groups.html"><li class="icon group"></li></a>
+        <a href="states.html"><li class="icon pencil"></li></a>
+        <a href="#"><li class="icon cog active"></li></a>
+      </ul>
+      <div class="notifications-alert icon asterisk"></div>
+    </div>
+    <div class="app-content">
+      <div class="expander">
+         <div class="subd" id="edit-profile">
+            <div class="cabe-showh" alt="edit-profile" data-translate="editprofile"></div>
+            <div class="cont" style="display:block">
+              <h5 data-translate="profileimage"></h5>
+              <img src="" class="img-center"/>
+              <div class="loadingimg"><span class="icon spinner"></span></div>
+              <button data-translate="profileimagesettings" style="float:left;"></button>
+              <input type="file" id="changeimage" style="opacity:0;z-index:100;top:-30px;position:relative"/>
+              <hr/>
+              <h5 data-translate="phonenumber"></h5>
+              <input type="text" data-translate="newphnum" id="mophn"/>
+              <button id="updtphbtn" data-translate="update"></button>
+              <hr/>
+              <h5 data-translate="password"></h5>
+              <input type="password" data-translate="newpass" id="newpassi"/>
+              <input type="password" data-translate="newpassconf" id="confnewpassi"/>
+              <button id="updpassn" data-translate="update"></button>
+            </div>
+         </div>
+         <div class="subd" id="block-users">
+            <div class="cabe-showh" alt="block-users" data-translate="blockpeopl"></div>
+            <div class="cont" style="display:none">
+              <h5 data-translate="myfriends"></h5>
+              <div class="listfriendblock"></div>
+            </div>
+         </div>
+         <div class="subd" id="chats-set">
+            <div class="cabe-showh" alt="chats-set" data-translate="chats"></div>
+            <div class="cont" style="display:none">
+              <button class="exportbutton" data-translate="exportconver"></button>
+              <button class="importbutton" data-translate="importconver"></button>
+            </div>
+         </div>
+         <div class="subd" id="idiom-set">
+            <div class="cabe-showh" alt="idiom-set" data-translate="language"></div>
+            <div class="cont" style="display:none">
+               <select class="form-control" id="idiomch">
+                 <option value='en'>English</option>
+                 <option value='es'>Español</option>
+                 <option value='ca'>Català</option>
+                 <option value='it'>Italiano</option>
+                 <option value='fr'>Français</option>
+                 <option value='pt'>Português</option>
+               </select>
+               <button class="changelang" data-translate="savech"></button>
+            </div>
+         </div>
+         <div class="subd" id="sign-out">
+            <div class="cabe-showh" alt="sign-out" data-translate="signout"></div>
+         </div>
+      </div>
+    </div>
+    <div id="modsv"></div>
+</div>
+      <audio id="audio_notifications"><source src="sounds/notification.ogg" type="audio/ogg">, <source src="sounds/notification.mp3" type="audio/mpeg"></audio>
+			<div id="dragger1" style="z-index:-10"><img style="width:100%;height:100%;vertical-align:middle" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div>
+			<!--<div id="dragger2"><img style="width:100%;height:100%;vertical-align:middle" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div>-->
+
+    <script src="js/quo.js"></script>
+  <script src="js/quo.environment.js"></script>
+  <script src="js/quo.query.js"></script>
+  <script src="js/quo.events.js"></script>
+  <script src="js/quo.gestures.js"></script>
+  <script src="js/jquery.generateFile.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript">   
+   notifications();
+   $(document).ready(function () {
+       var notificationsrefresh = setInterval(function () {
+           notifications();
+       }, 4000);
+   });
+  </script>
+  <script type="text/javascript" src="js/settings.js"></script>
+  <script type="text/javascript" src="js/language.js"></script>
+		</body>
+</html>

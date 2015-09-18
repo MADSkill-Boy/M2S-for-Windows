@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+		<head>
+			<meta charset="UTF-8">
+			<link rel="stylesheet" type="text/css" href="css/exs.css">
+			<script src="js/jquery-2.1.0.min.js"></script>
+      <script src="js/md5.js"></script>
+      <script src="js/asterisc.js"></script>
+      <script src="js/vex.combined.min.js"></script>
+      <script>vex.defaultOptions.className = 'vex-theme-top';</script>
+      <link rel="stylesheet" href="css/vex.css" />
+      <link rel="stylesheet" href="css/vex-theme-top.css" />
+      <script src="js/nw-desktop-notifications.js"></script>
+			<script type="text/javascript" src="js/app.js"></script>
+      <script type="text/javascript" src="js/login.js"></script>
+      <script type="text/javascript" src="js/modals.js"></script>
+			<link href="css/window.css" rel="stylesheet" media="screen">	
+      <link href="css/lungo.icon.css" rel="stylesheet" media="screen">
+		</head>
+		<body>
+			<body class="macosx lion">
+
+<div class="app">
+    <div class="title-bar">
+        
+        <div class="title-drag"></div>
+        <div class="app-title">
+            <span class="text" data-translate="mygroups"></span>
+        </div>
+        <span class="button-container window-controls">
+            <ul class="inline">
+                <li><a class="button minimize-button" href="#min" id="min">Minimize</a></li>
+                <li><a class="button maximize-button" href="#max" id="max">Maximize</a></li>
+                <li><a class="button close-button" href="#close" id="closehide">Close</a></li>
+            </ul>
+        </span>
+    </div>
+    <div class="app-bar">
+      <div class="background-blur" style="background-position-x: -640px;"></div>
+      <ul class="menu-bar">
+        <img src=""/>
+        <a href="myfriends.html"><li class="icon user"></li></a>
+        <a href="groups.html"><li class="icon group active"></li></a>
+        <a href="states.html"><li class="icon pencil"></li></a>
+        <a href="settings.html"><li class="icon cog"></li></a>
+      </ul>
+      <div class="notifications-alert icon asterisk"></div>
+    </div>
+    <div class="app-content">
+      <div id="list-friends">
+        <div style="margin-left:6px;margin-right:6px" class="s-class">
+          <span class="icon plus button-searchlast" id="creategroup-button"></span>
+          <input id="search-input" data-translate="search" class="searchstyle" style="width: calc(100% - 69px);">
+          <span class="icon globe button-searchlast" id="searchgroup-button"></span>
+        </div>
+      </div>
+      <div id="create-group" style="display:none">
+        <div style="margin-left:6px;margin-right:6px" class="s-class">
+          <span class="searchstyle" id="close-tabs" style="width:calc(100% - 10px);cursor: pointer;display: block;text-align: center;" data-translate="close"></span>
+          <h5 data-translate="createnewgroup"></h5>
+          <input type="text" id="namegroup-cr" data-translate="namegroup" class="form-control">
+    <input type="hidden" id="location-cr"/>
+    <textarea data-translate="description" id="descriptiongroup-cr" class="form-control widthfix"></textarea>
+    <label class="checkbox">
+        <input type="checkbox" id="privategroup-cr"> <span data-translate="private"></span>
+      </label>
+      <label class="checkbox">
+        <input type="checkbox" id="showcreator-cr" checked> <span data-translate="showcreator"></span>
+      </label>
+      <button class="btn btn-default" id="sharelocat-cr" data-translate="sharelocation"></button>
+      <button class="btn btn-info" id="creategroup-cr" data-translate="creategroup"></button>
+        </div>
+      </div>
+      <div id="search-groups" style="display:none">
+        <div style="margin-left:6px;margin-right:6px" class="s-class">
+          <span class="searchstyle" id="close-tabss" style="width:calc(100% - 10px);cursor: pointer;display: block;text-align: center;" data-translate="close"></span>
+          <input type="text" id="search-useradd" data-translate="searchanithinginteres" class="form-control im_dialogs_search_field ng-pristine ng-valid">
+          <button onclick="submitsearch()" data-translate="search" class="btn btn-info" style="width:100%;padding-top:6px;padding-bottom:6px"></button>   
+          <div class="search-group-ul"></div>
+        </div>
+      </div>
+    </div>
+    <div id="modsv"></div>
+</div>
+<audio id="audio_notifications"><source src="sounds/notification.ogg" type="audio/ogg">, <source src="sounds/notification.mp3" type="audio/mpeg"></audio>
+			<div id="dragger1" style="z-index:-10"><img style="width:100%;height:100%;vertical-align:middle" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div>
+			<!--<div id="dragger2"><img style="width:100%;height:100%;vertical-align:middle" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></div>-->
+
+    <script src="js/quo.js"></script>
+  <script src="js/quo.environment.js"></script>
+  <script src="js/quo.query.js"></script>
+  <script src="js/quo.events.js"></script>
+  <script src="js/quo.gestures.js"></script>
+  <script type="text/javascript" src="js/tinysort.min.js"></script>
+<script type="text/javascript" src="js/tinysort.charorder.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/groups.js"></script>
+  <script src="js/language.js"></script>
+  <script type="text/javascript">   
+   notifications();
+   $(document).ready(function () {
+       var notificationsrefresh = setInterval(function () {
+           notifications();
+       }, 4000);
+   });
+  </script>
+  
+		</body>
+</html>

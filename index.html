@@ -1,0 +1,79 @@
+<html>
+  <script src="js/jquery-2.1.0.min.js"></script>
+  <script src="js/app.js"></script>
+  <script type="text/javascript">
+  function pagefunctions(){
+     Object.keys(localStorage)
+        .forEach(function(key){
+            if (/^(ChatOpened)/.test(key)) {
+                localStorage.removeItem(key);
+            }
+            if (/^(ChatgrOpened)/.test(key)) {
+                localStorage.removeItem(key);
+            }
+        });
+     $.ajax({
+        type: "GET",
+        crossDomain: true,
+        url: "http://m2s.es/app/api/detectupdateapp.php",
+        data: "version=1.0.584",
+        cache:false,
+        dataType: 'jsonp',
+        success: function(result) {
+          if(result.mensaje == 'yes'){
+             window.location.href = 'updateassistant.html';
+          }else{
+          	if(!sessionStorage.getItem('menutrayh')){
+             var tray;
+             tray = new gui.Tray({icon: './images/icon-menubar.png' });
+             var menutray = new gui.Menu();
+             menutray.append(new gui.MenuItem({ label: Language.show }));
+             menutray.append(new gui.MenuItem({ label: Language.hide }));
+             menutray.append(new gui.MenuItem({ label: Language.close }));
+             menutray.items[0].click = function() {
+               win.show();
+               win.setShowInTaskbar(true);
+             };
+             menutray.items[1].click = function() {
+               win.hide();
+               win.setShowInTaskbar(false);
+               window.LOCAL_NW.desktopNotifications.notify('./images/icon.png', 'M2S', Language.minimizedapp, function(){win.show(); win.setShowInTaskbar(true);});
+             };
+             menutray.items[2].click = function() {
+               gui.App.quit();
+             };
+             tray.menu = menutray;
+             sessionStorage.setItem('menutrayh', '1');
+             }
+             window.location.href = 'myfriends.html';
+          }
+        },
+        error: function(XMLHttpRequest, textStatus, errorThrown) {
+          if(!sessionStorage.getItem('menutrayh')){
+          var tray;
+          tray = new gui.Tray({icon: './images/icon-menubar.png' });
+          var menutray = new gui.Menu();
+          menutray.append(new gui.MenuItem({ label: Language.show }));
+          menutray.append(new gui.MenuItem({ label: Language.hide }));
+          menutray.append(new gui.MenuItem({ label: Language.close }));
+          menutray.items[0].click = function() {
+            win.show();
+            win.setShowInTaskbar(true);
+          };
+          menutray.items[1].click = function() {
+            win.hide();
+            win.setShowInTaskbar(false);
+            window.LOCAL_NW.desktopNotifications.notify('./images/icon.png', 'M2S', Language.minimizedapp, function(){win.show(); win.setShowInTaskbar(true);});
+          };
+          menutray.items[2].click = function() {
+            gui.App.quit();
+          };
+          tray.menu = menutray;
+          }
+          window.location.href = 'myfriends.html';
+        }
+      })
+    }
+  </script>
+  <script src="js/language.js"></script>
+</html>

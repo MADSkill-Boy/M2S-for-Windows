@@ -1,0 +1,21 @@
+html,body{
+	height:100%;
+	width:100%;
+	overflow:hidden;
+	margin:0;
+	background: transparent;
+}
+
+#dragger1{
+	-webkit-app-region: drag;
+	position:fixed;
+	z-index:9999;
+	width:calc(100%);height:35px;top:0;left:0
+}
+
+#dragger2{
+	-webkit-app-region: drag;
+	position:fixed;
+	z-index:9999;
+	width:calc(100% - 472px);height:30px;;top:30px;left:302px
+}
